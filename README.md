@@ -1,6 +1,6 @@
 # Analyzing Travel Demand Patterns and Land Use in Washington State
 
-## Team Member
+## Team Members
 * Kaitlyn Ng
 * Kittibhum Tasanasuwan
 * Nutvara J
@@ -8,8 +8,10 @@
 ## Short Summary
 This study will provide insight into travel demand patterns and land use in the Puget Sound region. Land uses will be determined through satellite imagery and computer vision, while travel demand patterns will be extracted from a household travel survey. Demographic analysis will also be conducted.
 
+
 ## Introductory/background information
-Linking travel trajectories and land uses may provide insight into mobility patterns which improve a person's overall accessibility. ~~For example, individuals living in the suburbs may have fewer healthcare-related POIs near their home and thus have lower healthcare accessibility. However, as they commute downtown for work, we may observe spatiotemporal changes to healthcare POI density and subsequent increases in accessibility.~~
+Linking travel demand and land uses may provide insight into mobility patterns. [some more background here]
+
 
 ## Problem statement and reserach questions
 We aim to analyze correlations between travel pattern origin-destination (OD) flows and land use. Land uses will be identified via satellite imagery. The following questions will be answered:
@@ -35,7 +37,7 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 * <u>Demographic Analysis</u>:
 
 ## Expected outcomes
-* There will likely be areas where OD flows are clustered, such as in cities (Seattle, Tacoma, Everett). These areas will therefore be highly correlated with land uses such as residential (neighborhoods) and commercial (such as business districts). It is also expected that the OD matrix will be fairly sparse; for example, there may be a very high number of flows between Seattle and Bellevue, but very few flows between Seattle and census tracts in rural Eastern Washington. 
+* There will likely be areas where OD flows are clustered, such as in cities (Seattle, Tacoma, Everett). These areas will therefore be highly correlated with land uses such as residential (neighborhoods) and commercial (such as business districts). It is also expected that the OD matrix will be fairly sparse; for example, there may be a very high number of flows between Seattle and Bellevue, but very few flows between Seattle and census tracts in rural Eastern Washington. Additionally, it may be seen that census tracts of certain demographics may exhibit different OD flows. For example, low-income residential census tracts may have greater trips observed due to the nature of shift work, having more jobs, or more duties that are required outside of the home census tract. 
 * Classification of land use via satellite imagery(Image Classification)
 * Map for demographics, OD flow map
 
