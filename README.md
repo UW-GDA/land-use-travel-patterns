@@ -22,7 +22,8 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 ## Datasets
 * [Puget Sound Regional Council Household Travel Survey](https://www.psrc.org/our-work/household-travel-survey-program): Puget Sound Regional Council (PSRC), the metropolitan planning organization for King, Kitsap, Pierce, and Snohomish counties, conducts a household travel survey HTS) every 2-3 years to understand the travel patterns of its residents. This survey captures specific trips a person makes and records specific characteristics, such as travel time, origin location, destination location, and purpose of trip along with trip-maker characteristics. For this project, trip origins and destinations will be extracted to understand travel flows across the four-county region.
 * [some satellite imagery here?]
-* American Community Survey
+* [American Community Survey](https://www.census.gov/programs-surveys/acs): The American Community Survey (ACS), conducted by the U.S. Census Bureau, is a vital tool for gathering detailed characteristics data across communities in the United States. Released annually, the survey provides an information through various data tables covering social, economic, housing, and demographic aspects. In this project, this survey will be used to perform demographic analysis on selected characteristics within PSRC areas. 
+
 
 
 ## Tools/packages you’ll use
