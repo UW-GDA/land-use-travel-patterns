@@ -1,4 +1,4 @@
-# Analyzing Travel Demand Patterns and Land Use in Washington State
+# Analyzing Travel Demand Patterns and Land Use in Puget Sound region
 
 ## Team Members
 * Kaitlyn Ng
