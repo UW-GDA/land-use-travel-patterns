@@ -6,11 +6,11 @@
 * Nutvara J
 
 ## Short Summary
-This study will provide insight into travel demand patterns and land use in the Puget Sound region. Land uses will be determined through satellite imagery and computer vision, while travel demand patterns will be extracted from a household travel survey. Demographic analysis will also be conducted.
+This study will provide insight into travel demand patterns and land use in the Puget Sound region. Land uses pattern will be visulized for analysis, while travel demand patterns will be extracted from a household travel survey. Demographic analysis will also be conducted.
 
 
 ## Introductory/background information
-Linking travel demand and land uses may provide insight into mobility patterns. [some more background here]
+Linking travel demand and land uses may provide insight into mobility patterns. Understanding travel demand pattern for specific land use will help facilities planning.
 
 
 ## Problem statement and reserach questions
@@ -21,7 +21,7 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 
 ## Datasets
 * [Puget Sound Regional Council Household Travel Survey](https://www.psrc.org/our-work/household-travel-survey-program): Puget Sound Regional Council (PSRC), the metropolitan planning organization for King, Kitsap, Pierce, and Snohomish counties, conducts a household travel survey HTS) every 2-3 years to understand the travel patterns of its residents. This survey captures specific trips a person makes and records specific characteristics, such as travel time, origin location, destination location, and purpose of trip along with trip-maker characteristics. For this project, trip origins and destinations will be extracted to understand travel flows across the four-county region.
-* [some satellite imagery here?]
+* [General Land Use Final Dataset](https://geo.wa.gov/datasets/a0ddbd4e0e2141b3841a6a42ff5aff46_0/about): This data set was developed as an information layer for the Washington State Department of Commerce. It is designed to be used as part of the Puget Sound Mapping Project to provide a generalized and standardized depiction of land uses and growth throughout the Puget Sound region. For this project, land use data will be visualized and pattern will be analysised. 
 * American Community Survey
 
 
@@ -32,7 +32,6 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 
 
 ## Methodology/approach
-* <u>Computer Vision for land use classification</u>:
 * <u>OD Flow Analysis</u>: The PSRC HTS will be processed to obtain census tract-level flows across the four-county region. Based on where each recorded trip beings and ends, the origins and destination census tracts can be obtained for all participants in the survey. An [origin-destination (OD) matrix](https://transportgeography.org/contents/methods/spatial-interactions-gravity-model/od-matrix-construction/) will be created from these flows, where the matrix is of shape $N \times N$ and $N$ is the number of census tracts in the Puget Sound region. The matrix rows represent origin census tracts, and the matrix columns represent destination census tracts.
 * <u>Demographic Analysis</u>:
 
