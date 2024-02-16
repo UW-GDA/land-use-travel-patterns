@@ -10,7 +10,7 @@ This study will provide insight into travel demand patterns and land use in the 
 
 
 ## Introductory/background information
-Linking travel demand and land uses may provide insight into mobility patterns. Understanding travel demand pattern for specific land use will help facilities planning.
+Linking travel demand and land uses may provide insight into mobility patterns. Understanding travel demand pattern for specific land use will help facilities planning. Using [the Puget Sound Region](https://psrc-psregcncl.hub.arcgis.com/datasets/PSREGCNCL::census-tracts-2020/about) to discover different land uses.
 
 
 ## Problem statement and reserach questions
