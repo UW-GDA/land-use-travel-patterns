@@ -36,7 +36,7 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 
 ## Expected outcomes
 * There will likely be areas where OD flows are clustered, such as in cities (Seattle, Tacoma, Everett). These areas will therefore be highly correlated with land uses such as residential (neighborhoods) and commercial (such as business districts). It is also expected that the OD matrix will be fairly sparse; for example, there may be a very high number of flows between Seattle and Bellevue, but very few flows between Seattle and census tracts in rural Eastern Washington. Additionally, it may be seen that census tracts of certain demographics may exhibit different OD flows. For example, low-income residential census tracts may have greater trips observed due to the nature of shift work, having more jobs, or more duties that are required outside of the home census tract. 
-* Classification of land use via satellite imagery(Image Classification)
+* Visualization of land use over satellite imagery
 * Map for demographics, OD flow map
 
 
