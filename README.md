@@ -26,7 +26,7 @@ This study aims to **analyze the correlations between travel patterns, demograph
 * [General Land Use Final Dataset](https://geo.wa.gov/datasets/a0ddbd4e0e2141b3841a6a42ff5aff46_0/about): This data set was developed as an information layer for the Washington State Department of Commerce. It is designed to be used as part of the Puget Sound Mapping Project to provide a generalized and standardized depiction of land uses and growth throughout the Puget Sound region. For this project, land use data will be visualized and pattern will be analysised. 
 * [American Community Survey](https://www.census.gov/programs-surveys/acs): The American Community Survey (ACS), conducted by the U.S. Census Bureau, is a vital tool for gathering detailed characteristics data across communities in the United States. Released annually, the survey provides an information through various data tables covering social, economic, housing, and demographic aspects. In this project, this survey will be used to perform demographic analysis on selected characteristics within the King County areas. 
 
-## Tools/packages you’ll use
+## Tools/packages
 * Data wrangling: [numpy](https://numpy.org/doc/stable/user/index.html#user), [pandas](https://pandas.pydata.org/docs/user_guide/index.html#user-guide), [geopandas](https://geopandas.org/en/stable/docs.html)
 * OD flows: [scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) (see `FlowDataFrame`), 
 * Plotting: [matplotlib](https://matplotlib.org/stable/users/index.html), [folium](https://python-visualization.github.io/folium/latest/)
@@ -43,8 +43,11 @@ Our methodology integrates the above OD flow patterns, land uses, and demographi
 ## Key Insights
 
 
+
 ## Future Work
+* Currently, we are assigning a single land use to each census tract. This is not always representative of a census tract's total land uses (there may be many different land uses in a single census tract). Improved methods for land use classification for a census tract would improve analysis. For example, data could be collected on the proportion of land uses within a single census tract, instead of assign a single land use value. Additionally, image classification performed on satellite imagery could also be a different method to classify land uses.
+* Improved interactivity in the folium map could be incorporated to draw greater insights. Implementing tool tips, additional layers in the map, and adjusting layer controls could improve the exploratory power of the map.
+* Additional built environmnet information could also be included, such as point of interest (POI) data. Understanding how different POIs (grocery stores, restaurants, hostpitals, etc.) generate transit trips would also reveal greater insights into why transit trips are conducted.
 
 
 ## References
-TBC
