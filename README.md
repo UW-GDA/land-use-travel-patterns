@@ -1,4 +1,4 @@
-# Analyzing Travel Demand Patterns and Land Use in King County
+# Land Use, Transit Flows, and Demographics in King County
 
 ## Team Members
 * Kaitlyn Ng
@@ -6,17 +6,19 @@
 * Nutvara J
 
 ## Short Summary
-This study will provide insight into travel demand patterns and land use in the King County. Land uses pattern will be visulized for analysis, while travel demand patterns will be extracted from a household travel survey. Demographic analysis will also be conducted.
+This study will provide insight into the relationship between land use, demographics, and transit flows in King County. Land uses pattern will be visulized for analysis, while travel demand patterns will be extracted from a household travel survey. Demographic analysis will also be conducted.
 
 
 ## Introductory/background information
-Linking travel demand and land uses may provide insight into mobility patterns. Understanding travel demand pattern for specific land use will help facilities planning. 
+Transportation policy-makers often face the challenge of choosing between various transportation scenarios. To do this, they need to understand the flow of origin and destination (OD) of people. King County has diverse land use, including urban areas like Seattle, small towns like Issaquah, and rural areas like Snoqualmie. With different land uses, the population demographics also vary. Therefore, understanding how demographics and land use affect travel patterns is crucial for urban planning and transportation infrastructure development.
 
 
 ## Problem statement and reserach questions
-We aim to analyze correlations between travel pattern origin-destination (OD) flows and land use. Land uses will be identified via satellite imagery. The following questions will be answered:
-1) How do land uses affect trip generation? In other words, what land uses are correlated with a greater number of trips (e.g., do residential areas have more trips than industrial areas)?
-2) What is the correlation between OD flows and demographics given similar land uses? For example, do low-income residential census tracts have a greater number of outflows compared to high-income residential census tracts?
+This study aims to **analyze the correlations between travel patterns, demographics, and land use**. The study seeks to answer the following questions:
+
+* What is the correlation between OD flows and demographics given similar land uses?
+* How do land use and demographics affect the number of trips?
+* Does the city provide a reasonable amount of transit to each census tract based on demographics and land use types?
 
 
 ## Datasets
@@ -26,19 +28,22 @@ We aim to analyze correlations between travel pattern origin-destination (OD) fl
 
 ## Tools/packages you’ll use
 * Data wrangling: [numpy](https://numpy.org/doc/stable/user/index.html#user), [pandas](https://pandas.pydata.org/docs/user_guide/index.html#user-guide), [geopandas](https://geopandas.org/en/stable/docs.html)
-* OD flows: [scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) (see `FlowDataFrame`), [movingpandas](https://github.com/movingpandas/movingpandas) (see section on trajectory aggregation)
-* Plotting: [matplotlib](https://matplotlib.org/stable/users/index.html)
+* OD flows: [scikit-mobility](https://github.com/scikit-mobility/scikit-mobility) (see `FlowDataFrame`), 
+* Plotting: [matplotlib](https://matplotlib.org/stable/users/index.html), [folium](https://python-visualization.github.io/folium/latest/)
+* Anaylsis: [statsmodels](https://www.statsmodels.org/stable/index.html), [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
 
 
 ## Methodology/approach
-* <u>OD Flow Analysis</u>: The PSRC HTS will be processed to obtain census tract-level flows across the four-county region. Based on where each recorded trip beings and ends, the origins and destination census tracts can be obtained for all participants in the survey. An [origin-destination (OD) matrix](https://transportgeography.org/contents/methods/spatial-interactions-gravity-model/od-matrix-construction/) will be created from these flows, where the matrix is of shape $N \times N$ and $N$ is the number of census tracts in the Puget Sound region. The matrix rows represent origin census tracts, and the matrix columns represent destination census tracts.
-* <u>Demographic Analysis</u>: The analysis will utilize common demographic variables. Utilizing the function outlined in the exercise, demographic data of interest will be obtained using Federal Information Processing System (FIPS) codes. Correlations and visualizations of these demographics will be performed to obtain some insights. Subsequently, these insights will be integrated with OD flows and land uses.
+* <u>OD Flow Analysis</u>: The PSRC HTS was processed to obtain census tract-level flows across the four-county region. Based on where each recorded trip beings and ends, the origins and destination census tracts were obtained for all participants in the survey. An [origin-destination (OD) matrix](https://transportgeography.org/contents/methods/spatial-interactions-gravity-model/od-matrix-construction/) was created from these flows, where the matrix is of shape $N \times N$ and $N$ is the number of census tracts in the Puget Sound region. The matrix rows represent origin census tracts, and the matrix columns represent destination census tracts. OD flows are extracted for only transit trips.
+* <u>Land Use Analysis</u>: The land uses are clipped using census tract geometries (since land use outlines do not alilgn with census tract boundaries). For each census tract, areas are calculated for each type of land use. The land use with the largest area proportion in the census tract becomes assigned as the "land use" for that census tract.
+* <u>Demographic Analysis</u>: The analysis utilized common demographic variables. Utilizing the function outlined in the class exercise, demographic data of interest will be obtained using Federal Information Processing System (FIPS) codes. Correlations and visualizations of these demographics will be performed to obtain insights. 
 
-## Expected outcomes
-* There will likely be areas where OD flows are clustered, such as in cities (Seattle, Tacoma, Everett). These areas will therefore be highly correlated with land uses such as residential (neighborhoods) and commercial (such as business districts). It is also expected that the OD matrix will be fairly sparse; for example, there may be a very high number of flows between Seattle and Bellevue, but very few flows between Seattle and census tracts in rural Eastern Washington. Additionally, it may be seen that census tracts of certain demographics may exhibit different OD flows. For example, low-income residential census tracts may have greater trips observed due to the nature of shift work, having more jobs, or more duties that are required outside of the home census tract. 
-* Visualization of land use over satellite imagery
-* Insight Plots for demographics of interest
-* OD flow map with demographics of interest
+Our methodology integrates the above OD flow patterns, land uses, and demographics. A correlation analysis is run to determine the relationship of variables with each other. The correlations are used to inform linear regression models to understand the relationships more deeply. The correlations and linear regressions inform variable selection for a geospatial mapping analysis.
+
+## Key Insights
+
+
+## Future Work
 
 
 ## References
