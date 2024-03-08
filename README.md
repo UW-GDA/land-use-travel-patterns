@@ -41,6 +41,12 @@ This study aims to **analyze the correlations between travel patterns, demograph
 
 Our methodology integrates the above OD flow patterns, land uses, and demographics. A correlation analysis is run to determine the relationship of variables with each other. The correlations are used to inform linear regression models to understand the relationships more deeply. The correlations and linear regressions inform variable selection for a geospatial mapping analysis.
 
+## Project File Structure
+* All analysis can be founded in *Final_notebook.ipynb*
+* *presentation_notebook.ipynb* is shorten of *Final_notebook.ipynb*. A html version, *presentation_notebook.html*, is provided for visualizing interactive plot.  
+* Raw data for OD flow, land use, and demographic were process seperately in *individual_nb*. Processed data were exported and store in *exported_data* folder. 
+
+
 ## Key Insights
 **1) OD flows and demographics** :A slight correlation exists between % Black, lower-income tracts, and larger OD flows, suggesting potential reliance on transit or station construction in areas with lower costs.
 
